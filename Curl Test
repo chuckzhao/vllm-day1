@@ -1,0 +1,9 @@
+curl http://localhost:8000/v1/chat/completions \ curl http://localhost:8000/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "messages": [
+      {"role": "user", "content": "Say: Chuck just deployed Mistral-7B with vLLM on Day 1!"}
+    ],
+    "max_tokens": 50
+  }'
